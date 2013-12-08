@@ -22,8 +22,7 @@ class AsciiToHexCommand(sublime_plugin.TextCommand):
                 elif setting == 3:
                     new = '{0:x}'.format(ord(i)) + ' '
                 elif setting == 5:
-                    new = hex(ord(i)) + ' '
-                    # new = '\x' + hex(ord(i))
+                    new = '\\x' + format(ord(i),'x')
                 else:
                     new = hex(ord(i)) + ', '
                 hx = hx + new
