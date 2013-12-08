@@ -11,8 +11,8 @@ class HexToAsciiCommand(sublime_plugin.TextCommand):
         for item in reglist:
             hx = v.substr(v.sel()[reglist.index(item)])
             hx = hx.strip('{} .,')
-            if '\x' in hx:
-                hx = hx.replace('\x', '0x')
+            if '\\x' in hx:
+                hx = hx.replace('\\x', ' 0x')
             if ',' in hx:
                 hx = hx.replace(', ', ' ')
                 hx = hx.replace(',', ' ')
@@ -27,7 +27,7 @@ class HexToAsciiCommand(sublime_plugin.TextCommand):
                 sublime.status_message("Perhaps we lost key \"%s\" in the end of line?" % hx[len(hx) - 1])
             for i in range(0, len(hx)-1, t):
                 if not(hx[i] in hexdig) or not(hx[i+1] in hexdig):
-                    sublime.error_message("ha \"%s\" isn't a part of hexadecimal number!" % hx[i:i+2])
+                    sublime.error_message("\"%s\" isn't a part of hexadecimal number!" % hx[i:i+2])
                     break
                 if (hx[i] == ' ') or (hx[i+1] == ' '):
                     continue
