@@ -1,4 +1,0 @@
-[
-	{"keys": ["super+'","super+h"], "command": "ascii_to_hex"},
-	{"keys": ["super+h","super+'"], "command": "hex_to_ascii"}
-]

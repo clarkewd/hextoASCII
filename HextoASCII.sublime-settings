@@ -3,5 +3,6 @@
     //for 68656c6c6f form - use 2,
     //for 68 65 6c 6c 6f form -  3 (default)
     //for {0x68, 0x65, 0x6c, 0x6c, 0x6f} - 4
-    "literals": 1
+    //for \x68\x65\x6c\x6c\x6f - 5
+    "literals": 5
 }

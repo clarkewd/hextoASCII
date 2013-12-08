@@ -1,0 +1,4 @@
+[
+        { "caption": "Convert selection to Hex", "command": "ascii_to_hex" },
+        { "caption": "Convert selection to Ascii", "command": "hex_to_ascii" }
+]
